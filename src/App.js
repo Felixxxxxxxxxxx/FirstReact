@@ -1,5 +1,6 @@
 import './App.css';
 import StudentCard from "./components/StudentCard";
+import {FancyButton} from './components/FancyButton'
 
 function App() {
     const students =[
@@ -20,11 +21,19 @@ function App() {
         }
     ];
 
+    console.log("LOGLAEUFT");
+
     return (
         <div>
             {students.map(student => <StudentCard key={student.id}
                                                   title={"Name: "+student.name}
                                                   description={"Uni: "+ student.uni}/>)}
+
+
+
+            <FancyButton onClick={() => console.log("KLICK")}>GO</FancyButton>
+
+
         </div>
     );
 }
